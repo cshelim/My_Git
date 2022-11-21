@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,31 +15,40 @@
         body {
             margin: 0 auto;
         }
+
         ul {
-            padding: 0; margin: 0;
+            padding: 0;
+            margin: 0;
             list-style: none;
         }
+
         .container1 {
             width: 100%;
             height: 90vh;
             background: url(./images/img1.jpg) no-repeat 50% 50% / cover;
+            position: relative;
+            z-index: 999;
         }
-        /* .nav {
+
+        .white_bar {
             width: 100%;
-            margin: 0; padding: 0 10px;
-            display: flex;
-            border-bottom: 1px solid black;
+            height: 86.33px;
+            background-color: rgb(255, 255, 255);
             position: fixed;
+            top: 0;
+            z-index: 9;
         }
-        */
+
         .nav li:nth-child(1) {
             margin-right: auto;
             font-weight: bold;
         }
+
         .nav li a {
             text-decoration: none;
             color: black;
         }
+
         .nav {
             width: 100%;
             display: flex;
@@ -46,14 +56,17 @@
             position: fixed;
             top: 0;
         }
-        .nav > li {
+
+        .nav>li {
             padding: 30px;
             font-size: 1.2em;
         }
+
         .submenu {
             position: absolute;
             top: -100px;
         }
+
         .submenu li {
             height: 0;
             transition: .1s linear;
@@ -63,79 +76,101 @@
             margin-left: -25px;
             text-align: center;
         }
-        .nav li:hover .submenu > li {
+
+        .nav li:hover .submenu>li {
             height: 31px;
             position: relative;
             top: 185px;
             background-color: black;
             color: aliceblue;
             border: 1px white solid;
+            border-top: none;
         }
-        .nav li:hover > a {
+
+        .nav li:hover>a {
             color: blue;
         }
+
         .container2 {
-            width: 100%; height: 80vh;
+            width: 100%;
+            height: 80vh;
             display: flex;
             z-index: -99;
         }
+
         .box1 {
             display: grid;
             grid-template: repeat(2, 300px) / repeat(2, 40vw);
             place-content: center;
-            margin: 80px auto; padding: 0;
+            margin: 80px auto;
+            padding: 0;
             width: 100%;
         }
+
         .box1 li {
             padding: 30px 30px 80px 40px;
             overflow: hidden;
         }
+
         .box1 li:nth-child(1) {
             border-bottom: 1px solid black;
             border-right: 1px solid black;
         }
+
         .box1 li:nth-child(2) {
             border-bottom: 1px solid black;
         }
+
         .box1 li:nth-child(3) {
             border-right: 1px solid black;
         }
+
         .container3 {
-            width: 100%; height: 60vw;
+            width: 100%;
+            height: 60vw;
             margin-top: 80px;
             display: grid;
             grid-template: repeat(3, 1fr) / repeat(4, 1fr);
             font-size: 0;
         }
+
         .bg1 {
             grid-column: 1 / 3;
             grid-row: 1 / 3;
             background: url(./images/img1.jpg) no-repeat 50% / cover;
         }
+
         .bg2 {
             background: url(./images/img2.jpg) no-repeat 50% / cover;
         }
+
         .bg3 {
             background: url(./images/img3.jpg) no-repeat 50% / cover;
         }
+
         .bg4 {
             grid-column: 3 / 5;
             background: url(./images/img4.jpg) no-repeat 50% / cover;
         }
+
         .bg5 {
             grid-column: 1 / 3;
             background: url(./images/img5.jpg) no-repeat 50% / cover;
         }
+
         .bg6 {
             background: url(./images/img6.jpg) no-repeat 50% / cover;
         }
+
         .bg7 {
             background: url(./images/img7.jpg) no-repeat 50% / cover;
         }
+
         .container4 {
             text-align: center;
             margin-top: 20vw;
         }
+
         .mini_container {
             display: grid;
             grid-template: repeat(2, 40vw) / repeat(2, 1fr);
@@ -144,32 +179,38 @@
             gap: 30px;
             margin: 100px auto;
         }
+
         .mini_container p {
             margin: 0;
             margin-top: 10px;
         }
+
         .back-drop {
             height: 40vw;
             background: url(./images/bg1.jpg) no-repeat 50% / cover;
             font-size: 0;
         }
+
         .back-drop2 {
             height: 40vw;
             background: url(./images/bg2.jpg) no-repeat 50% / cover;
             font-size: 0;
         }
+
         .back-drop3 {
             height: 40vw;
             background: url(./images/bg3.jpg) no-repeat 50% / cover;
             font-size: 0;
             margin-top: 100px;
         }
+
         .back-drop4 {
             height: 40vw;
             background: url(./images/bg4.jpg) no-repeat 50% / cover;
             font-size: 0px;
             margin-top: 100px;
         }
+
         .drop:hover .blur {
             height: 40vw;
             width: 1fr;
@@ -177,10 +218,12 @@
             backdrop-filter: blur(3px);
             font-size: 40px;
             display: flex;
-            justify-content: center; align-items: center;
+            justify-content: center;
+            align-items: center;
             font-weight: bold;
             color: aliceblue;
         }
+
         .container5 {
             height: 80vh;
             background-color: rgb(226, 226, 226);
@@ -189,33 +232,41 @@
             place-content: center;
             margin-top: 45vw;
         }
+
         .mini_container2 {
-            width: 90vw; height: 60vh;
+            width: 90vw;
+            height: 60vh;
             display: grid;
             grid-template: repeat(3, 1fr) / repeat(2, 1fr);
         }
+
         .grid_box3 {
             grid-column: 1 / 3;
             grid-row: 2 / 4;
             position: relative;
             overflow: hidden;
         }
+
         .grid_box3 video {
             position: absolute;
             top: -50%;
             width: 100%;
         }
+
         .container6 {
             text-align: center;
         }
-        .container6 > h1 {
+
+        .container6>h1 {
             margin: 5vw;
         }
+
         .flex_box {
             display: flex;
             width: 90vw;
             margin: 0 auto;
         }
+
         .img_box {
             width: 30vw;
             display: grid;
@@ -223,68 +274,86 @@
             margin: 0px 2vw;
             transition: .5s;
             text-align: left;
-            box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+            box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
         }
+
         .img_box:hover {
             transform: scale(1.1);
         }
-        .left-padding  h3, p {
+
+        .left-padding h3,
+        p {
             padding-left: 10px;
         }
+
         .card1 {
             background: url(./images/card1.jpg) no-repeat 50% / cover;
             grid-row: 1 / 4;
             font-size: 0;
         }
+
         .card2 {
             background: url(./images/card2.jpg) no-repeat 50% / cover;
             grid-row: 1 / 4;
             font-size: 0;
         }
+
         .card3 {
             background: url(./images/card3.jpg) no-repeat 50% / cover;
             grid-row: 1 / 4;
             font-size: 0;
         }
+
         .card4 {
             background: url(./images/card4.jpg) no-repeat 50% / cover;
             grid-row: 1 / 4;
             font-size: 0;
         }
+
         .container7 h1 {
             margin: 15vh;
             text-align: center;
         }
-        .up_box, .down_box {
-        width: 80vw; height: 40vh;
-        margin: 0 auto;
+
+        .up_box,
+        .down_box {
+            width: 80vw;
+            height: 40vh;
+            margin: 0 auto;
         }
+
         .up_box p {
             margin: 10px;
             color: aliceblue;
         }
+
         .place_box {
             display: grid;
             background-color: rgb(174, 174, 174);
             width: 300px;
         }
+
         .down_box li {
             display: flex;
             border-bottom: 1px solid black;
         }
+
         .down_box ul li:last-child {
             border-bottom: 3px solid black;
         }
+
         .down_box li p:nth-child(1) {
             font-size: 18px;
             font-weight: bold;
             width: 100px;
             text-align: left;
         }
+
         .container8 {
             margin-top: 15vh;
             position: relative;
         }
+
         .fixed {
             height: 60vh;
             background: url(./images/fixed.jpg) no-repeat center / cover;
@@ -297,17 +366,21 @@
             color: aliceblue;
             background-color: aqua;
         }
+
         .bg_color {
             width: 100%;
             height: 60vh;
             background-color: rgb(7, 180, 105);
             position: absolute;
-            bottom: 0; left: 0;
+            bottom: 0;
+            left: 0;
             opacity: .3;
         }
+
         .fixed p {
             margin: 0;
         }
+
         .btn {
             margin-top: 10vh;
             text-decoration: none;
@@ -315,11 +388,13 @@
             border: 3px solid rgb(255, 255, 255);
             padding: 10px 15px;
         }
+
         .container9 {
             text-align: center;
             padding: 20px;
             position: relative;
         }
+
         .up_btn {
             position: absolute;
             right: 3vw;
@@ -334,6 +409,7 @@
         }
     </style>
 </head>
+
 <body>
     <!-- 
         1. 드롭다운 메뉴
@@ -380,6 +456,7 @@
             </ul>
         </header>
     </div>
+    <div class="white_bar"></div>
     <div class="container2">
         <ul class="box1">
             <li>
@@ -388,11 +465,13 @@
             </li>
             <li>
                 <h2>Development</h2>
-                <p>붙잡아 없으면, 웅대한 풍부하게 품었기 것이다. 가장 같은 얼마나 되는 할지니, 부패뿐이다. 노래하며 그들은 이성은 길을 것은 있는 이상의 풀이 봄바람이다. 굳세게 없으면 얼음 있는가?</p>
+                <p>붙잡아 없으면, 웅대한 풍부하게 품었기 것이다. 가장 같은 얼마나 되는 할지니, 부패뿐이다. 노래하며 그들은 이성은 길을 것은 있는 이상의 풀이 봄바람이다. 굳세게 없으면 얼음
+                    있는가?</p>
             </li>
             <li>
                 <h2>Analysis</h2>
-                <p>앞이 착목한는 고행을 주는 품에 것이다. 품으며, 청춘 천지는 현저하게 든 새 얼음이 끓는 이것이다. 새가 주는 그들은 든 약동하다. 열락의 보이는 가는 같이, 품고 아름다우냐?</p>
+                <p>앞이 착목한는 고행을 주는 품에 것이다. 품으며, 청춘 천지는 현저하게 든 새 얼음이 끓는 이것이다. 새가 주는 그들은 든 약동하다. 열락의 보이는 가는 같이, 품고 아름다우냐?
+                </p>
             </li>
             <li>
                 <h2>Marketing</h2>
@@ -414,88 +493,90 @@
         <p>we are a passionate digital agency that specializes in beautiful and easy-to-ues digital design & web</p>
         <p>Development service</p>
         <div class="mini_container">
-        <div class="bigimg1">
-            <div class="back-drop drop">
-                bg
-                <div class="blur">blur</div>
+            <div class="bigimg1">
+                <div class="back-drop drop">
+                    bg
+                    <div class="blur">blur</div>
+                </div>
+                <p>1.Brokerage</p>
+                <p>theme dose everything you could possibly want it to do</p>
             </div>
-            <p>1.Brokerage</p>
-            <p>theme dose everything you could possibly want it to do</p>
-        </div>
-        <div class="bigimg2">
-            <div class="back-drop2 drop">
-                bg
-                <div class="blur">blur</div>
+            <div class="bigimg2">
+                <div class="back-drop2 drop">
+                    bg
+                    <div class="blur">blur</div>
+                </div>
+                <p>2.Banking</p>
+                <p>this theme does everything you could possibly want it to do</p>
             </div>
-            <p>2.Banking</p>
-            <p>this theme does everything you could possibly want it to do</p>
-        </div>
-        <div class="bigimg3">
-            <div class="back-drop3 drop">
-                bg
-                <div class="blur">blur</div>
+            <div class="bigimg3">
+                <div class="back-drop3 drop">
+                    bg
+                    <div class="blur">blur</div>
+                </div>
+                <p>3.Contracts</p>
+                <p>this theme does everything you could possibly want it to do</p>
             </div>
-            <p>3.Contracts</p>
-            <p>this theme does everything you could possibly want it to do</p>
-        </div>
-        <div class="bigimg4">
-            <div class="back-drop4 drop">
-                bg
-                <div class="blur">blur</div>
+            <div class="bigimg4">
+                <div class="back-drop4 drop">
+                    bg
+                    <div class="blur">blur</div>
+                </div>
+                <p>4.agency</p>
+                <p>있는 그와 그들에게 청춘에서만 이상, 피다.</p>
             </div>
-            <p>4.agency</p>
-            <p>있는 그와 그들에게 청춘에서만 이상, 피다.</p>
-        </div>
         </div>
     </div>
     <div class="container5">
         <div class="mini_container2">
             <h1 class="grid_box1">Our Youtube</h1>
-            <p class="grid_box2">몸이 무엇을 뜨거운지라, 가는 뿐이다. 모래뿐일 같으며, 쓸쓸한 그와 들어 목숨을 가는 봄바람이다. 열매를 투명하되 품에 능히 인류의 하였으며, 심장의 듣는다. 심장의 투명하되 굳세게 생의 끓는다. 수 아니더면, 커다란 봄바람이다. 따뜻한 위하여 날카로우나 사는가 옷을 품었기 것은 같이, 이 끓는다. 투명하되 쓸쓸한 기관과 더운지라 노년에게서 광야에서 산야에 것이다.</p>
+            <p class="grid_box2">몸이 무엇을 뜨거운지라, 가는 뿐이다. 모래뿐일 같으며, 쓸쓸한 그와 들어 목숨을 가는 봄바람이다. 열매를 투명하되 품에 능히 인류의 하였으며, 심장의
+                듣는다. 심장의 투명하되 굳세게 생의 끓는다. 수 아니더면, 커다란 봄바람이다. 따뜻한 위하여 날카로우나 사는가 옷을 품었기 것은 같이, 이 끓는다. 투명하되 쓸쓸한 기관과 더운지라
+                노년에게서 광야에서 산야에 것이다.</p>
             <div class="grid_box3">
-            <video src="./images/video.mp4" autoplay loop muted></video>
+                <video src="./images/video.mp4" autoplay loop muted></video>
             </div>
         </div>
     </div>
     <div class="container6">
         <h1>Our Service</h1>
         <div class="flex_box">
-        <div class="img_box1 img_box">
-            <div class="card1">
-                bg
+            <div class="img_box1 img_box">
+                <div class="card1">
+                    bg
+                </div>
+                <div class="left-padding">
+                    <h3>title 1</h3>
+                    <p>이상 사랑의 구할 이상은 커다란 스며들어 칼이다. 든 있는 그들을 천지는 이것이다.</p>
+                </div>
             </div>
-            <div class="left-padding">
-            <h3>title 1</h3>
-            <p>이상 사랑의 구할 이상은 커다란 스며들어 칼이다. 든 있는 그들을 천지는 이것이다.</p>
+            <div class="img_box2 img_box">
+                <div class="card2">
+                    bg
+                </div>
+                <div class="left-padding">
+                    <h3>title 2</h3>
+                    <p>우리 하여도 동산에는 찾아다녀도, 살았으며, 사람은 쓸쓸하랴?</p>
+                </div>
             </div>
-        </div>
-        <div class="img_box2 img_box">
-            <div class="card2">
-                bg
+            <div class="img_box3 img_box">
+                <div class="card3">
+                    bg
+                </div>
+                <div class="left-padding">
+                    <h3>title 3</h3>
+                    <p>않는 하였으며, 위하여서 곳으로 없는 그들의 방지하는 바이며, 사막이다.</p>
+                </div>
             </div>
-            <div class="left-padding">
-            <h3>title 2</h3>
-            <p>우리 하여도 동산에는 찾아다녀도, 살았으며, 사람은 쓸쓸하랴?</p>
+            <div class="img_box4 img_box">
+                <div class="card4">
+                    bg
+                </div>
+                <div class="left-padding">
+                    <h3>title 4</h3>
+                    <p>그들은 피어나는 것은 맺어, 아니다. 위하여 어디 청춘에서만 것은 청춘 것이다.</p>
+                </div>
             </div>
-        </div>
-        <div class="img_box3 img_box">
-            <div class="card3">
-                bg
-            </div>
-            <div class="left-padding">
-            <h3>title 3</h3>
-            <p>않는 하였으며, 위하여서 곳으로 없는 그들의 방지하는 바이며, 사막이다.</p>
-            </div>
-        </div>
-        <div class="img_box4 img_box">
-            <div class="card4">
-                bg
-            </div>
-            <div class="left-padding">
-            <h3>title 4</h3>
-            <p>그들은 피어나는 것은 맺어, 아니다. 위하여 어디 청춘에서만 것은 청춘 것이다.</p>
-            </div>
-        </div>
         </div>
     </div>
     <div class="container7">
@@ -523,11 +604,13 @@
                     </li>
                     <li>
                         <p>SUB</p>
-                        <p>Working at the nexus of aesthetics and sustainability to craft meaningful design ideas that endure.</p>
+                        <p>Working at the nexus of aesthetics and sustainability to craft meaningful design ideas that
+                            endure.</p>
                     </li>
                     <li>
                         <p>bus</p>
-                        <p>This theme does everything you could possibly want it to do and, it is beautifully designed.</p>
+                        <p>This theme does everything you could possibly want it to do and, it is beautifully designed.
+                        </p>
                     </li>
                 </ul>
             </div>
@@ -548,4 +631,5 @@
         <a href="#" class="up_btn">^</a>
     </div>
 </body>
+
 </html>
